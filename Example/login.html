@@ -1,27 +1,43 @@
 <div class="container">
-		<div class="row">
-  			<div class="col-md-6 col-md-offset-3">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="jumbotron">
+                <h1>Login</h1>
+                <form class="form-horizontal" name="loginForm">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" required id="inputEmail3" placeholder="Email" name="email" ng-model="userEmail">
+                        </div>
+                    </div>
+                    <div ng-show="loginForm.email.$dirty && loginForm.email.$invalid" class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span ng-show="loginForm.email.$error.required">Email is required.</span>
+                        <span ng-show="loginForm.email.$error.email">Invalid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" required name="password" class="form-control" id="inputPassword3" placeholder="Password" ng-model="password">
+                        </div>
+                    </div>
+                     <div ng-show="loginForm.password.$dirty && loginForm.password.$invalid" class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span ng-show="loginForm.password.$error.required">Password is required.</span>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div>
+                    </div>
 
-			      <form class="form-signin">
-			        <h2 class="form-signin-heading">Please sign in</h2>
-			        <label for="inputEmail" class="sr-only">Email address</label>
-			        <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" ng-model="userEmail">
-			        <label for="inputPassword" class="sr-only">Password</label>
-			        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" ng-model="password">
-			        <div class="checkbox">
-			          <label>
-			            <input type="checkbox" value="remember-me"> Remember me
-			          </label>
-			        </div>
-			        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-			      </form>
-			</div>
-			<div class="jumbotron">
-  				<div class="container">
-   					Hello ! {{userEmail}} Your password is {{password}}
-  				</div>
-			</div>
-			<a href="table.html"><div class="btn btn-primary">Example Table</div></a>
-		</div>
+                    Hello ! {{userEmail}} Your password is {{password}}
+            </div>
+        </div>
+
+        </form>
+        
+    </div>
+    <div ng-include="'table.html'"></div>
 </div>
-		
+</div>

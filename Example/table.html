@@ -1,2 +1,26 @@
-<script type="text/ng-template" id="table.html">
-</script>
+<div class="row">
+    <div class="col-md-4">
+
+        <form class="form-horizontal">
+            <div class="input-group">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status" ng-model="searchValue">
+            </div>
+        </form>
+    </div>
+</div>
+<table class="table table-hover table-bordered ">
+    <thead>
+        <tr>
+            <th ng-click="sortColumn('name')">First Name <span ng-class="getSortClass('name')" aria-hidden="true"></span></th>
+            <th ng-click="sortColumn('country')">Last Name <span ng-class="getSortClass('country')" aria-hidden="true"></span></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="each in names |filter:searchValue |orderBy:sortField:sortBy |uppercase">
+            <td>{{each.name}}</td>
+            <td>{{each.country}}</td>
+        </tr>
+
+    </tbody>
+</table>
