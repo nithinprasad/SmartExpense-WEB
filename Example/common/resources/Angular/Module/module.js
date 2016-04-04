@@ -1,1 +1,1 @@
-var smartExpenseApp = angular.module('smartApp', []);
+var smartExpenseApp = angular.module('smartApp', ['ngRoute']);

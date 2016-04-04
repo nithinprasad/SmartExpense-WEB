@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Smart Expense</title>
-    
+    <title>Smart Expense</title>
+
     <!-- UI Elements-->
-	<link rel="stylesheet" type="text/css" href="common/resources/UI/css/bootstrap.css">
-    <script src="common/resources/UI/js/bootstrap.js"></script>
-   
+        <link rel="stylesheet" type="text/css" href="common/resources/UI/css/bootstrap.css">
+        <script src="common/resources/UI/js/bootstrap.js"></script>
     <!-- UI Elements-->
-    
+
     <!--Angular Elements-->
-   <!-- <script src="common/resources/Angular/Angular/npm.js"></script>-->
-	<script src="common/resources/Angular/Angular/angular.js"></script>
-	<script src="common/resources/Angular/Module/module.js"></script>
-    <script src="common/resources/Angular/Controller/ControllerImpl/mainControllerImpl.js"></script>
-    <script src="common/resources/Angular/Controller/controllers.js"></script>
-    <!--Angular Elements-->
-    
+
+        <!--Angular js file from google-->
+            <script src="common/resources/Angular/Angular/angular.js"></script>
+            <script src="common/resources/Angular/Angular/angular-route.js"></script>
+        <!--Angular js file from google-->
+
+        <!--Angular Modules-->
+            <script src="common/resources/Angular/Module/module.js"></script>
+        <!--Angular Modules-->
+
+        <!--Angular Route Config-->
+            <script src="common/resources/Angular/Module/Configuration/rootConfig.js"></script>
+        <!--Angular Route Config-->
+
+        <!--Angular Controller-->
+            <script src="common/resources/Angular/Controller/ControllerImpl/mainControllerImpl.js"></script>
+            <script src="common/resources/Angular/Controller/controllers.js"></script>
+        <!--Angular Controller-->
+
+   <!--Angular Elements-->
+
 </head>
+
 <body ng-app="smartApp" ng-controller="smartController">
-    <div ng-include="'module/login/login.html'"></div>
+   <!-- <div ng-include="'module/login/login.html'"></div>-->
+    <div ng-view></div>
 </body>
+
 </html>
