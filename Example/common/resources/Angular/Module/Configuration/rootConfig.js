@@ -3,15 +3,18 @@ smartExpenseApp .config(['$routeProvider',
     $routeProvider.
       when('/', {
         templateUrl: 'module/login/login.html',
-        controller: 'smartController'
+        controller: 'loginController',
+        controllerPath:'module/login/js/smartController.js'
       }).
       when('/login', {
         templateUrl: 'module/login/login.html',
-        controller: 'smartController'
+        controller: 'loginController',
+        controllerPath:'module/login/js/loginController.js'
       }).
       when('/table', {
         templateUrl: 'module/table/table.html',
-        controller: 'smartController'
+        controller: 'tableController',
+        controllerPath:'module/table/js/tableController.js'
       }).
       otherwise({
         redirectTo: '/login'

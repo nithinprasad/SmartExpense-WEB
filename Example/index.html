@@ -34,8 +34,10 @@
 </head>
 
 <body ng-app="smartApp" ng-controller="smartController">
-   <!-- <div ng-include="'module/login/login.html'"></div>-->
-    <div ng-view></div>
+    <div ng-include="'module/menu.html'"></div>
+    <div ng-view >
+        {{controllerSrc}}
+    </div>
 </body>
 
 </html>
