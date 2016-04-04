@@ -1,0 +1,1 @@
+var smartExpenseApp = angular.module('smartApp', []);

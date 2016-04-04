@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Example</title>
-	<link rel="stylesheet" type="text/css" href="../common/resources/css/bootstrap.css">
-	<script src="../common/resources/js/angular.js"></script>
-	<script src="../common/resources/SmartExpensejs/Module/module.js"></script>
-    <script src="../common/resources/SmartExpensejs/Commonjs/smartController.js"></script>
-	<script src="../common/resources/SmartExpensejs/Controller/controller.js"></script>
-
+	<title>Smart Expense</title>
+    
+    <!-- UI Elements-->
+	<link rel="stylesheet" type="text/css" href="common/resources/UI/css/bootstrap.css">
+    <script src="common/resources/UI/js/bootstrap.js"></script>
+   
+    <!-- UI Elements-->
+    
+    <!--Angular Elements-->
+   <!-- <script src="common/resources/Angular/Angular/npm.js"></script>-->
+	<script src="common/resources/Angular/Angular/angular.js"></script>
+	<script src="common/resources/Angular/Module/module.js"></script>
+    <script src="common/resources/Angular/Controller/ControllerImpl/mainControllerImpl.js"></script>
+    <script src="common/resources/Angular/Controller/controllers.js"></script>
+    <!--Angular Elements-->
+    
 </head>
 <body ng-app="smartApp" ng-controller="smartController">
-    <div ng-include="'login.html'"></div>
+    <div ng-include="'module/login/login.html'"></div>
 </body>
 </html>

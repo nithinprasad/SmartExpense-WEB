@@ -1,0 +1,1 @@
+smartExpenseApp.controller('smartController', smartController);
