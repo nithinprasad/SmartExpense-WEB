@@ -14,6 +14,8 @@
         <!--Angular js file from google-->
             <script src="common/resources/Angular/Angular/angular.js"></script>
             <script src="common/resources/Angular/Angular/angular-route.js"></script>
+            <script src="common/resources/Angular/Angular/angular-ui-router.js"></script>
+            <script src="common/resources/Angular/Angular/angular-router-styles.js"></script>
         <!--Angular js file from google-->
 
         <!--Angular Modules-->
@@ -34,7 +36,7 @@
 </head>
 
 <body ng-app="smartApp" ng-controller="smartController">
-    <div ng-include="'module/menu.html'"></div>
+     <div ui-view></div>
     
 </body>
 

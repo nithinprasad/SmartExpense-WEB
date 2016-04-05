@@ -1,22 +1,78 @@
-smartExpenseApp .config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/', {
+// https://scotch.io/tutorials/angular-routing-using-ui-router
+smartExpenseApp.config(['$stateProvider', function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+        /*.state('login', {
+        url: '/login',
         templateUrl: 'module/login/login.html',
         controller: 'loginController',
-        controllerPath:'module/login/js/smartController.js'
-      }).
-      when('/login', {
-        templateUrl: 'module/login/login.html',
+        css: [],
+        js: [{
+                href:'module/login/js/login.js'
+            }],
+        views: {}
+        })
+        .state('home', {
+            url: '/about',
+            templateUrl: 'module/menu.html',
+            controller: 'homeController'
+            css: [{
+                    href: 'my-page/my-page.mobile.css'
+                }],
+            views: {
+               'columnOne@about': {
+                    templateUrl: 'module/login/login.html',
+                    controller: 'loginController',
+                    css: [],
+                    js: [{
+                            href:'module/login/js/login.js'
+                        }]
+                },
+               'columnOne@about': {
+                    templateUrl: 'module/login/login.html',
+                    controller: 'loginController',
+                    css: [],
+                    js: [{
+                            href:'module/login/js/login.js'
+                        }]
+                }
+            }
+
+        });*/
+        .state('/', {
+        url: '/',
         controller: 'loginController',
-        controllerPath:'module/login/js/loginController.js'
-      }).
-      when('/table', {
-        templateUrl: 'module/table/table.html',
+        templateUrl: 'module/login/login.html',
+        data: {
+          css: [
+            {
+              href: 'module/login/css/login.css'
+            }
+          ]
+        }
+        })
+        .state('menu', {
+        url: '/menu',
+        controller: 'loginController',
+        templateUrl: 'module/menu.html',
+        data: {
+          css: [
+            {
+              href: 'module/css/menu.css'
+            }
+          ]
+        }
+      })
+    .state('menu.table', {
+        url: '/table',
         controller: 'tableController',
-        controllerPath:'module/table/js/tableController.js'
-      }).
-      otherwise({
-        redirectTo: '/login'
-      });
-  }]);
+        templateUrl: 'module/table/table.html',
+        data: {
+          css: [
+            {
+              href: 'module/css/table.css'
+            }
+          ]
+        }
+      })
+
+}]);
