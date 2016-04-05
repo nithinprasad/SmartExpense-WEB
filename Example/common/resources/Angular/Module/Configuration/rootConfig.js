@@ -52,12 +52,17 @@ smartExpenseApp.config(['$stateProvider', function ($stateProvider, $urlRouterPr
         })
         .state('menu', {
         url: '/menu',
-        controller: 'loginController',
+        controller: 'menuController',
         templateUrl: 'module/menu.html',
         data: {
           css: [
             {
               href: 'module/css/menu.css'
+            }
+          ],
+          js: [
+            {
+              href: 'module/js/table.js'
             }
           ]
         }
@@ -70,6 +75,11 @@ smartExpenseApp.config(['$stateProvider', function ($stateProvider, $urlRouterPr
           css: [
             {
               href: 'module/css/table.css'
+            }
+          ],
+          js: [
+            {
+              href: 'module/ks/table.js'
             }
           ]
         }
